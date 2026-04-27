@@ -1,0 +1,31 @@
+# Never commit secrets
+.env
+.env.local
+.streamlit/secrets.toml
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Downloaded PDFs and generated outputs
+downloads/
+*.pdf
+output_*.xlsx
+
+# Job result files written by the API (one .xlsx per analysis job)
+results/*.xlsx
+
+# Temporary Excel lock files created when a file is open in Excel
+~$*.xlsx
+
+# IDE
+.vscode/
+.idea/

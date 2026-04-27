@@ -1,0 +1,30 @@
+# REST API — n8n calls these endpoints instead of a browser UI
+fastapi>=0.111.0          # web framework that turns Python functions into HTTP endpoints
+uvicorn>=0.29.0           # server that runs FastAPI (start with: uvicorn api:app --reload)
+python-multipart>=0.0.9   # required by FastAPI to accept file uploads via form-data
+
+# PDF extraction — PyMuPDF is layout-aware, handles multi-column and tables
+pymupdf>=1.24.0
+
+# Excel I/O
+pandas>=2.0.0
+openpyxl>=3.1.2          # required by pandas to read/write .xlsx
+
+# OpenAI + structured outputs (Pydantic parses LLM JSON directly into typed objects)
+# 1.78.0+ required for the Responses API (client.responses.parse with text_format=)
+openai>=1.78.0
+pydantic>=2.0.0
+
+# Vector search (in-memory, no server needed)
+faiss-cpu>=1.8.0
+numpy>=1.26.0
+
+# Quote verification — fuzzy string matching to catch hallucinated quotes
+rapidfuzz>=3.6.0
+
+# HTTP + web scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# Load .env file in development
+python-dotenv>=1.0.0
